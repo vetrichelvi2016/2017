@@ -17,20 +17,31 @@ app.run(function($ionicPlatform) {
     }
   });
 
-})
+});
 app.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
-  $stateProvider.state('login', {
-    url: '/login.html',
-    controller: 'mainController'
-  });
+  $stateProvider
+  .state('login', {
+    url: '/login',
+    templateUrl:'templates/login.html',
+    controller: 'mainController',
+    cache: false,
+  })
+  .state('user',{
+    url:'/user',
+    templateUrl:'templates/user.html',
+    controller:'mainController',
+    cache: false,
+  })
+  .state('setting',{
+  url:'/setting',
+  templateUrl:'templates/setting.html',
+  controller:'mainController',
+  })
+  $urlRouterProvider.otherwise('app/login');
+});
 
-   $urlRouterProvider.otherwise('/app/main');
-
-})
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }

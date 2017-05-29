@@ -35,8 +35,6 @@
     <script src="js/loginService.js"></script>
   </head>
   <body ng-app="starter" ng-controller="mainController">
-
-
     <!-- side meu bar -->
     <ion-side-menus>
     <!-- Center content -->
@@ -54,36 +52,45 @@
                       <button type="button" ng-click="myAcSheet()">Action Sheet</button>
                         <button class="button button-block button-calm"><a href="login\login.html">Login</a></button>
                 </div> </div> -->
-                  <textarea id-"textarea1" placeholder="sample"></textarea>
+                <ion-content scroll="true" >
+               <ion-view view-title="Login" name="login-view">
+               <ion-content class="padding">
+               <div class="list list-inset">
+               <label class="item item-input">
+               <input type="text" placeholder="Username" ng-model="data.username">
+               </label>
+               <label class="item item-input">
+               <input type="password" placeholder="Password" ng-model="data.password">
+               </label>
+               </div>
+               <button class="button button-block button-calm" ng-click="login()">Login</button>
+               </ion-content>
+               </ion-view>
+             </ion-content>
 
-                      <ion-view view-title="Login" name="login-view">
-                      <ion-content class="padding">
-                      <div class="list list-inset">
-                      <label class="item item-input">
-                      <input type="text" placeholder="Username" ng-model="data.username">
-                      </label>
-                      <label class="item item-input">
-                      <input type="password" placeholder="Password" ng-model="data.password">
-                      </label>
-                      </div>
-                      <button class="button button-block button-calm" ng-click="login()">Login</button>
-                      </ion-content>
-                      </ion-view>
-            <!-- </ion-content> -->
+                <div class="">
+                  <ul class="list">
+                    <li class="item" ng-click="goToLogin()">List1</li>
+                    <li class="item" ng-click="goToUser()">List2</li>
+                    <li class="item" ng-click="goToSetting()">List1</li>
+                    <li class="item">List1</li>
+                    </item>
+                  </ul>
+                </div>
+
+                <textarea id="myTextArea1" placeholder="placement auto - Enter a fruit" cols="20" rows="5"></textarea>
+
         </ion-side-menu-content>
         <ion-side-menu>
             <div class="menu-wrapper ">
                 <ul class="list">
-                    <li class="item" ng-click="gotoHome()">Home</li>
-                    <li class="item">Contact</li>
-                    <li class="item">Setting</li>
+                    <li class="item" ng-click="goToLogin()">Home</li>
+                    <li class="item" ng-click="goToUser()">Contact</li>
+                    <li class="item" ng-click="goToLogin()">Setting</li>
                 </ul>
             </div>
         </ion-side-menu>
       </ion-side-menus>
-
-
-
 
   <!-- side meu bar -->
   <div class="bar bar-footer">
@@ -102,7 +109,20 @@
 
 
 
-
+  <!-- <ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+  <div class="list list-inset">
+  <label class="item item-input">
+  <input type="text" placeholder="Username" ng-model="data.username">
+  </label>
+  <label class="item item-input">
+  <input type="password" placeholder="Password" ng-model="data.password">
+  </label>
+  </div>
+  <button class="button button-block button-calm" ng-click="login()">Login</button>
+  </ion-content>
+  </ion-view> -->
+<!-- </ion-content> -->
 
 
       <!-- <button type="button" ng-click="myAcSheet()">Action Sheet</button>
