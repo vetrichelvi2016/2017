@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/loginService.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="mainController">
+
+
+    <!-- side meu bar -->
+    <ion-side-menus>
+    <!-- Center content -->
+    <div>
+        <ion-side-menu-content>
+            <ion-header-bar style="background-color:#B90028">
+                <div>
+                    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+                    <h1 class="title">Book Shop</h1>
+                </div>
+            </ion-header-bar>
+            <!-- <ion-content scroll="true" > -->
+               <!-- <div class='content'>
+                      <div class="bar bar-header"><h1 class="title">Home</h1></div>
+                      <button type="button" ng-click="myAcSheet()">Action Sheet</button>
+                        <button class="button button-block button-calm"><a href="login\login.html">Login</a></button>
+                </div> </div> -->
+                  <textarea id-"textarea1" placeholder="sample"></textarea>
+
+                      <ion-view view-title="Login" name="login-view">
+                      <ion-content class="padding">
+                      <div class="list list-inset">
+                      <label class="item item-input">
+                      <input type="text" placeholder="Username" ng-model="data.username">
+                      </label>
+                      <label class="item item-input">
+                      <input type="password" placeholder="Password" ng-model="data.password">
+                      </label>
+                      </div>
+                      <button class="button button-block button-calm" ng-click="login()">Login</button>
+                      </ion-content>
+                      </ion-view>
+            <!-- </ion-content> -->
+        </ion-side-menu-content>
+        <ion-side-menu>
+            <div class="menu-wrapper ">
+                <ul class="list">
+                    <li class="item" ng-click="gotoHome()">Home</li>
+                    <li class="item">Contact</li>
+                    <li class="item">Setting</li>
+                </ul>
+            </div>
+        </ion-side-menu>
+      </ion-side-menus>
+
+
+
+
+  <!-- side meu bar -->
+  <div class="bar bar-footer">
+    <div class="title">Terms and service</div>
+  </div>
+
+
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <button type="button" ng-click="myAcSheet()">Action Sheet</button>
+      <script id="test-modal.html" type="text/ng-template">
+
+
+  <ion-modal-view>
+    <ion-header-bar>
+<h1 class="title">Your Modal title</h1>
+    </ion-header-bar>
+    <ion-content>
+      Hello World!!
+    </ion-content>
+  </ion-modal-view>
+</script> -->
+<!-- <div class="bar bar-header">
+  <button type="button" ng-click="showAlert()" >Show Alert</button></div>
+ <div class="content has-header"></div> -->
+      <!-- <ul class="list">
+        <li class="item">1</li>
+        <li class="item">1</li>
+        <li class="item item-divider">divider <i class="ion-email"></i></li>
+        <li class="item">1</li>
+      </ul>
+      <div class="card">
+        <div class="item item-text-wrap">
+          Simple Card Example.....
+        </div>
+      </div>
+    <div class="list">
+      <label class="item item-input"><input type="text" placeholder="name"></label>
+      <label class="item item-input"><input type="text" placeholder="email"></label>
+     <div class="positive"><button class="button button-positive"><i class="icon ion-ios-telephone">submit</button></div>
+
+    </div>
+
+    <ul class="list">
+      <li class="item item-toggle"> ON OFF
+        <label class="toggle toggle-assertive">
+        <input type="checkbox">
+          <div class="track"></div>
+          <div class="handle"></div>
+        </label>
+      </li>
+    </ul>
+  <!-- <button type="button" ng-click="myAcSheet()">Action Sheet</button> -->
+
+   <!--  <div class="tabs">
+      <a class="tab-item">Home</a>
+      <a class="tab-item">contact</a>
+      <a class="tab-item">View</a>
+    </div> -->
+
+
+      <!-- <div class="bar bar-footer bar-light">
+        <button class="button button-clear">Left</button>
+        <button class="button button-clear">Right</button>
+
+      </div> -->
